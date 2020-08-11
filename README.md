@@ -1,4 +1,4 @@
-# sk_mid_project
+# mid_pjt
 
 [사전 환경 설정]
 - IAM 보안자격 증명 탭에서 Access Key 생성
@@ -18,16 +18,17 @@ $ ssh-keygen
 
 [적용 절차]
 
-$ cd ~/environment/sk_mid_project
+$ cd ~/environment/mid_pjt
 $ terraform init
 $ terraform plan
 $ terraform apply --auto-approve
 
 [테스트]
 - Windows Powershell Script (로드밸런서 DNS 주소(http주소)를 복사하여 wget 이후부터 ;start-sleep 전까지의 http 주소를 치환)
+for($i=0;$i -lt 3600;$i++){wget [여기에 로드밸런서 DNS 주소(http로 시작하는 주소) 붙여넣기];start-sleep -Seconds 1}
 - 아래 사례 참고
-for($i=0;$i -lt 3600;$i++){wget http://user111a-alb-8080-1993274192.us-east-2.elb.amazonaws.com:8080/;start-sleep -Seconds 1}
-for($i=0;$i -lt 3600;$i++){wget http://user202-alb-80-1246684189.us-east-1.elb.amazonaws.com/;start-sleep -Seconds 1}
+for($i=0;$i -lt 3600;$i++){wget http://user111a-alb-8080-1993274192.us-east-2.elb.amazonaws.com:8080;start-sleep -Seconds 1}
+for($i=0;$i -lt 3600;$i++){wget http://user01-alb2-742064812.ap-northeast-2.elb.amazonaws.com;start-sleep -Seconds 1}
 
 
 [문제점]
