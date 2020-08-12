@@ -1,4 +1,4 @@
-# mid_pjt
+# mid_pjt2
 
 [사전 환경 설정]
 - IAM 보안자격 증명 탭에서 Access Key 생성
@@ -18,7 +18,7 @@ $ ssh-keygen
 
 [적용 절차]
 
-$ cd ~/environment/mid_pjt
+$ cd ~/environment/mid_pjt2
 $ terraform init
 $ terraform plan
 $ terraform apply --auto-approve
